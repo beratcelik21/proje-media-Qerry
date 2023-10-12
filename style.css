@@ -1,0 +1,220 @@
+
+:root {
+    /* #mavi tonları */
+    --blue-1: hsl(205, 100%, 30%);
+    --blue-2: hsl(205, 100%, 40%);
+    --blue-3: hsl(205, 100%, 50%);
+    --blue-4: hsl(205, 100%, 60%);
+    --blue-5: hsl(205, 100%, 70%);
+  
+    /*? Daha acik mavi tonlari */
+    --blue-light-1: hsl(205, 89%, 70%);
+    --blue-light-2: hsl(205, 90%, 76%);
+    --blue-light-3: hsl(205, 86%, 81%);
+    --blue-light-4: hsl(205, 90%, 88%);
+    --blue-light-5: hsl(205, 100%, 96%);
+  
+    /*? Grimin koyu tonlari */
+    --grey-1: hsl(209, 61%, 16%);
+    --grey-2: hsl(211, 39%, 23%);
+    --grey-3: hsl(209, 34%, 30%);
+    --grey-4: hsl(209, 28%, 39%);
+  
+    /*? Grinin acik tonlari */
+    --grey-5: hsl(210, 22%, 49%);
+    --grey-6: hsl(209, 23%, 60%);
+    --grey-7: hsl(211, 27%, 70%);
+    --grey-8: hsl(210, 31%, 80%);
+    --grey-9: hsl(212, 33%, 89%);
+    --grey-10: hsl(210, 36%, 96%);
+  
+    /*? Diger renkler */
+    --purple: hsl(276, 85%, 49%);
+    --white: #fff;
+    --red-dark: #a62440;
+    --red-light: hsl(360, 67%, 66%);
+    --black: #222;
+  
+    --green-dark: hsl(168, 66%, 22%);
+    --green: hsl(115, 34%, 37%);
+    --green-light: hsl(75, 51%, 60%);
+    --yellow: hsl(52, 100%, 68%);
+    --orange: hsl(11, 100%, 59%);
+    --orange-light: hsl(11, 100%, 67%);
+    --orange-dark: hsl(11, 100%, 50%);
+  
+    /* fontlar */
+    --ff-robot: "Roboto";
+    --ff-prosto: "Prosto One", cursive;
+    --ff-pt: "PT Sans Narrow", sans-serif;
+    --ff-sevillana: "Sevillana", cursive;
+    --ff-yeon: "Yeon Sung", cursive;
+  
+    /* font size */
+    --fs-3xl:3rem;
+    --fs-2xl:2rem;
+    --fs-xl:1.8rem;
+    --fs-lg: 1.4rem;
+    --fs-md: 1rem;
+    --fs-sm: 0.8rem;
+    --fs-xs: 0.6rem;
+  
+    /* line height */
+    --line-xl:2;
+    --line-lg:1.5;
+  
+    /* shadow */
+    --shadow-dark:0 0 20px rgba(0,0,0,0.8);
+    --shadow-light:0 0 20px rgba(0,0,0,0.2)
+  
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  body{
+    background-color: var(--white);
+    font-family: var(--ff-robot);
+
+  }
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+  }
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  header img{
+    width: 200px;
+  }
+  button{
+    border: 2px solid var(--red-dark);
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow-dark);
+    font-family: var(--ff-yeon);
+    margin: 1rem 0.5rem;
+    white-space: nowrap;
+
+  }
+  button:hover{
+    cursor: pointer;
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+  .btn-light{
+    background-color: var(--white);
+    color: var(--red-dark);
+  }
+  .btn-dark{
+    background-color: var(--red-dark);
+    color: var(--white);
+  }
+  nav.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  nav.hero section {
+    flex: 1;
+
+  }
+  nav.hero img{
+    width: 100%;
+  }
+
+  main .card:nth-child(odd) {
+    flex-direction: row;
+  }
+  main .card:nth-child(even) {
+    flex-direction: row-reverse;
+
+  }
+
+  nav.hero h1{
+    font-size: var(--fs-lg);
+    text-align: justify;
+    line-height: var(--line-xl);
+
+  }
+  nav.hero p{
+    font-size: var(--fs-md);
+    line-height: var(--line-xl);
+    text-align: justify;
+  }
+
+  main .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow-light);
+    padding: 1rem;
+    margin: 2rem 0;
+  }
+
+  main .card article {
+    flex: 1;
+    line-height: var(--line-xl);
+  }
+
+  main .card img{
+    width: 100%;
+  }
+
+  @media screen  and (max-width: 480px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+    header button{
+      margin:  0.5rem;
+
+    }
+    nav.hero{
+      flex-direction: column;
+
+    }
+    main .card:nth-child(odd){
+      flex-direction: column;
+    }
+
+    main .card:nth-child(even){
+      flex-direction: column;
+    }
+    BODY{
+      background-color: var(--blue-light-4);
+
+    }
+    
+  }
+
+  @media screen and (min-width:481px) and (max-width: 768px) {
+
+    body {
+      background-color: yellowgreen;
+    }
+    nav.hero {
+      flex-direction: column;
+      font-size: 0.8rem;
+      padding: 1.2rem;
+      margin: 1.5rem;
+    }
+    
+  }
+  @media screen and (min-width: 1200px) {
+    body{
+      background-color: rgb(223, 99, 27);
+    }
+    
+  }
